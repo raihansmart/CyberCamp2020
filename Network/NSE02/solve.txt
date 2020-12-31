@@ -1,0 +1,80 @@
+I got an IP: cgames-ne02.allyourbases.co and a Port: 9011 
+
+Just use sudo nmap -sSCV -vv -p 9011 -Pn cgames-ne02.allyourbases.co to see what happens. Finally, i got an output like this :
+
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+Starting Nmap 7.91SVN ( https://nmap.org ) at 2020-12-31 10:48 WIB
+NSE: Loaded 154 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+Warning: Hostname cgames-ne02.allyourbases.co resolves to 2 IPs. Using 54.73.16.249.
+Initiating Parallel DNS resolution of 1 host. at 10:48
+Completed Parallel DNS resolution of 1 host. at 10:48, 0.34s elapsed
+Initiating SYN Stealth Scan at 10:48
+Scanning cgames-ne02.allyourbases.co (54.73.16.249) [1 port]
+Discovered open port 9011/tcp on 54.73.16.249
+Completed SYN Stealth Scan at 10:48, 0.26s elapsed (1 total ports)
+Initiating Service scan at 10:48
+Scanning 1 service on cgames-ne02.allyourbases.co (54.73.16.249)
+Completed Service scan at 10:48, 17.32s elapsed (1 service on 1 host)
+NSE: Script scanning 54.73.16.249.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.61s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 2.44s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+Nmap scan report for cgames-ne02.allyourbases.co (54.73.16.249)
+Host is up, received user-set (0.21s latency).
+Other addresses for cgames-ne02.allyourbases.co (not scanned): 54.220.115.210
+rDNS record for 54.73.16.249: ec2-54-73-16-249.eu-west-1.compute.amazonaws.com
+Scanned at 2020-12-31 10:48:10 WIB for 21s
+
+PORT     STATE SERVICE REASON          VERSION
+9011/tcp open  d-star? syn-ack ttl 218
+| fingerprint-strings: 
+|   FourOhFourRequest, LDAPSearchReq, NCP, NULL, NotesRPC, SIPOptions, SMBProgNeg, SSLSessionReq, TerminalServer, X11Probe, afp, giop, ms-sql-s: 
+|_    Flag: Knock_Knock_Who's_There?_Flags_There!
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9011-TCP:V=7.91SVN%I=7%D=12/31%Time=5FED49FB%P=x86_64-unknown-linux
+SF:-gnu%r(NULL,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(S
+SF:SLSessionReq,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(
+SF:SMBProgNeg,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(X1
+SF:1Probe,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(FourOh
+SF:FourRequest,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(L
+SF:DAPSearchReq,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(
+SF:SIPOptions,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(Te
+SF:rminalServer,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(
+SF:NCP,2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(NotesRPC,
+SF:2C,"Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(ms-sql-s,2C,"
+SF:Flag:\x20Knock_Knock_Who's_There\?_Flags_There!\n")%r(afp,2C,"Flag:\x20
+SF:Knock_Knock_Who's_There\?_Flags_There!\n")%r(giop,2C,"Flag:\x20Knock_Kn
+SF:ock_Who's_There\?_Flags_There!\n");
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 10:48
+Completed NSE at 10:48, 0.00s elapsed
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.77 seconds
+           Raw packets sent: 1 (44B) | Rcvd: 1 (44B)
+
+And you got the Flag. Pretty simple right :)
