@@ -1,0 +1,72 @@
+Let's download the file in the link : https://cgames-files.allyourbases.co/fe05.zip
+
+First, use unzip (name of the file) command to extract the file. 
+Here is the output : journalist.jpg
+
+Next, use exiftool to get the information about the .jpg file. 
+Here is the output of the file after using exiftool itself :
+
+ExifTool Version Number         : 11.88
+File Name                       : journalist.jpg
+Directory                       : .
+File Size                       : 846 kB
+File Modification Date/Time     : 2020:09:11 17:59:39+07:00
+File Access Date/Time           : 2020:12:31 12:48:17+07:00
+File Inode Change Date/Time     : 2020:12:31 12:48:09+07:00
+File Permissions                : rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : inches
+Current IPTC Digest             : cdcffa7da8c7be09057076aeaf05c34e
+Coded Character Set             : UTF8
+Application Record Version      : 0
+IPTC Digest                     : cdcffa7da8c7be09057076aeaf05c34e
+X Resolution                    : 72
+Displayed Units X               : inches
+Y Resolution                    : 72
+Displayed Units Y               : inches
+Print Style                     : Centered
+Print Position                  : 0 0
+Print Scale                     : 1
+Global Angle                    : 30
+Global Altitude                 : 30
+URL List                        : 
+Slices Group Name               : old-1130733_1920
+Num Slices                      : 1
+Pixel Aspect Ratio              : 1
+Photoshop Thumbnail             : (Binary data 4860 bytes, use -b option to extract)
+Has Real Merged Data            : Yes
+Writer Name                     : Adobe Photoshop
+Reader Name                     : Adobe Photoshop 2020
+Photoshop Quality               : 10
+Photoshop Format                : Progressive
+Progressive Scans               : 3 Scans
+XMP Toolkit                     : Adobe XMP Core 6.0-c002 79.164460, 2020/05/12-16:04:17
+Document ID                     : adobe:docid:photoshop:45705402-0747-cd44-b282-c92abec339fe
+Instance ID                     : xmp.iid:0280be9b-8cdb-cb49-9850-d75164587586
+Original Document ID            : AE3A2816B9E8FECB4C854F7ACC02B264
+Format                          : image/jpeg
+Color Mode                      : RGB
+ICC Profile Name                : 
+Create Date                     : 2020:09:11 11:44:12+01:00
+Modify Date                     : 2020:09:11 11:58:46+01:00
+Metadata Date                   : 2020:09:11 11:58:46+01:00
+History Action                  : saved, saved
+History Instance ID             : xmp.iid:097df976-f4e2-774b-9e1c-757aac58459d, xmp.iid:0280be9b-8cdb-cb49-9850-d75164587586
+History When                    : 2020:09:11 11:58:46+01:00, 2020:09:11 11:58:46+01:00
+History Software Agent          : Adobe Photoshop 21.2 (Windows), Adobe Photoshop 21.2 (Windows)
+History Changed                 : /, /
+Text Layer Name                 : MELBOURNE, FLAG:
+Text Layer Text                 : MELBOURNE, FLAG:
+Image Width                     : 1920
+Image Height                    : 1440
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:4:4 (1 1)
+Image Size                      : 1920x1440
+Megapixels                      : 2.8
+
+Finally, i got the Flag. The Flag is in the 'Text Layer'. Pretty simple right :)
