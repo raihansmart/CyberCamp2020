@@ -1,0 +1,10 @@
+I got the code : X_pb_cdi_p_hpaps
+I got the hint : Your answer is alphanumeric, but also contains underscores.
+
+After i figured it for around 1 hour+, the code is caesar cipher.
+
+Then after i figured the code is caesar cipher, i search the keyword "caesar cipher decode" in the internet.
+And i found this link : https://www.dcode.fr/caesar-cipher
+Next, i copy the code and paste it to the "CAESAR SHIFTED CIPHERTEXT" and decrypt it.
+The hint is : Your answer is alphanumeric, but also contains underscores.
+After i decrypt it, finally i found the flag : I_am_not_a_salad.
