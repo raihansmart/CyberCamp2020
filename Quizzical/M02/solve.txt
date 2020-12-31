@@ -1,0 +1,7 @@
+Here is the cipher text : 
+Gsrh xrksvi dzh lirtrmzoob fhvw uli Svdyivd gvcg yfg szh yvvm nlwrurvw uli Ozgrm hfkklig. Xllo sfs? Zmbdzb, dvoo wlmv zmw gsv uozt blf ziv ollprmt uli rh ZgYZ4s3iU0ixv
+
+After i thinking for a little bit and use the hint button because i don't know what the cipher type is, it is a AtBash Cipher itself!!! 
+It is my first time knowing that... Then, i search the AtBash Cipher in the internet and i found this link : http://rumkin.com/tools/cipher/atbash.php
+Then i copy the cipher text and paste it in order to get the flag.
+Finally, i got the flag... the flag should be : AtBA4h3rF0rce
