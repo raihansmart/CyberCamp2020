@@ -1,0 +1,42 @@
+I got a link : https://cgames-files.allyourbases.co/ne01.zip
+I got a hint : The flag is the CVE with the highest severity rating.
+
+First, let's download the link. Then, unzip it. You should get an output ne01.txt
+Next, use cat command to see the output of the file. Here is the output :
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-14 02:27 PDT
+Nmap scan report for 192.168.47.1
+Host is up (0.00055s latency).
+Not shown: 993 filtered ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+903/tcp  open  iss-console-mgr
+2869/tcp open  icslap
+5357/tcp open  wsdapi
+5555/tcp open  PCMan's FTP Server 2.0.7
+
+Nmap scan report for _gateway (192.168.47.2)
+Host is up (0.00077s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+53/tcp open  domain
+
+Nmap scan report for 192.168.47.128
+Host is up (0.0014s latency).
+All 1000 scanned ports on 192.168.47.128 are closed
+
+Nmap scan report for ubuntu (192.168.47.129)
+Host is up (0.0010s latency).
+All 1000 scanned ports on ubuntu (192.168.47.129) are closed
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 7.75 seconds
+
+
+PCMan's FTP Server 2.0.7? Interesting...
+Because the hint say the flag is the CVE, we should search PCMan's FTP Server 2.0.7 in the internet.
+After that i got the link : https://www.cvedetails.com/vulnerability-list/vendor_id-13318/product_id-27651/version_id-165587/Pcman-s-Ftp-Server-Project-Pcman-s-Ftp-Server-2.0.7.html
+
+Finally, i got the flag with the red color score (10.00)
