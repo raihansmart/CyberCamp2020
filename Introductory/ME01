@@ -1,0 +1,10 @@
+We got a base64 decode which is : VGhlIGZsYWcgeW91IGFyZSBsb29raW5nIGZvciBpcyBFbmMwZDNyTWE0NHQzcg==
+We got a hint about how to decode it : CyberChef
+
+First, search in google about CyberChef.
+Then, type magic and drag it to the recipe.
+Finally , copy the base64 decode and paste it to see what happens. The output i got is :
+
+The flag you are looking for is Enc0d3rMa44t3r
+
+Pretty simple Right :)
