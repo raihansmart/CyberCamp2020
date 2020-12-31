@@ -1,0 +1,8 @@
+I got the encoded message : MJZGS43UN5WCAY3JOR4SAZDPMNVXG===
+
+It is base32 encoded. How to decode it?
+First, search cyberchef on the internet.
+Then, search magic in cyberchef and drag it to the recipe.
+Finally, copy and paste the encoded message to see the output, and you got the flag...
+
+Flag : bristol city docks
