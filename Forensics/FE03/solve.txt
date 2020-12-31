@@ -1,0 +1,7 @@
+Let's download the zip file in the link : https://cgames-files.allyourbases.co/fe03.zip
+Then, extract the zip file using unzip. Here is the output of the extracted file : REPORT-junior-taking-too-long-at-lunch.pdf
+
+After that, open the extracted file, and you should see that there is a cencored word in the odf itself.
+The solution for this is just copy all the text in pdf file, and paste it to your text editor itself. The cencored word should be now UNCENCORED.
+
+Finally, you got the flag which should be in the EOL (End of Lunch) Indicator section. Pretty simple right :)
