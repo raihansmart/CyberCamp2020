@@ -1,2 +1,2 @@
 # CyberCamp2020
-My SANS Cyber Camp 2020 Writeups
+My SANS Cyber Camp 2020 CTF Writeups
