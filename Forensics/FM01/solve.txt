@@ -1,0 +1,43 @@
+Let's open the link trafficdisruptors.com to see what happens. 
+Here is the output i got : This site can’t be reached
+
+Hmm nothing intersting, but how about using dnsdumpster or dig command to increase the curiousity?
+Let's use it....
+
+DNS Dumpster Path :
+1. Search the internet about "dns dumpster" and you should get the link dnsdumpster.com as a result, open that link...
+2. After that, just copy the trafficdisruptors.com and paste it to dnsdumpster and click search. Let's see what happens after this...
+3. There is a txt records found in trafficdisruptors.com and there is a flag inside of the txt file itself. Finally, you got the flag for it....
+
+Dig Path :
+1. If you don't have installed the dig into your kali linux / ubuntu / parrot linux / anything related to it, you can access the link below to install dig :
+https://www.cyberciti.biz/faq/ubuntu-dig-command-not-found-install-digonubuntu/
+2. If you have installed the dig, you can use dig -h to know more about this command. Alright, let's do it...
+3. While you use the dig -h, you see something interesting like this :
+
+ q-type   is one of (a,any,mx,ns,soa,hinfo,axfr,txt,...) [default:a]
+                 (Use ixfr=version for type ixfr)
+It turns out that dig command can dig the information about the site's txt or anything as long as you input the specified q-type of it...
+
+4. In this case, i use dig (domain site) (q-type) command -> dig trafficdisruptors.com txt to see what happens. Here is the output i got :
+
+; <<>> DiG 9.16.1-Ubuntu <<>> trafficdisruptors.com txt
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51973
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;trafficdisruptors.com.		IN	TXT
+
+;; ANSWER SECTION:
+trafficdisruptors.com.	1337	IN	TXT	"flag=hidden_in_plain_sight"
+
+;; Query time: 39 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Min Jan 03 09:16:17 WIB 2021
+;; MSG SIZE  rcvd: 89
+
+Finally, you got the flag in the txt file of the trafficdisruptors.com itself...
