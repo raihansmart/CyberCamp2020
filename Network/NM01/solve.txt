@@ -1,0 +1,92 @@
+Let's download the zip file from the link : https://cgames-files.allyourbases.co/nm01.zip
+
+Extract the file using unzip (name of the file) command -> unzip nm01.zip
+
+After the file has been extracted, it turns out that the file is a nm01.pcapng file.
+Let's open the nm01.pcapng file using wireshark.
+
+Next, while you checking these packet capture there is something interesting in number 4.
+In your wireshark let's click Analyze in your menu bar -> Follow -> TCP Stream or Right Mouse -> Follow -> TCP Stream to see what nm01.pcapng is communciating with...
+
+In TCP Stream 0 , i found an interesting output, here is the output :
+
+Todays file password is: SecurePa55word8!
+
+It turns out that SecurePa55word8! is the password... 
+Hmmm interesting, it turns out that this file originally is not just .pcapng file.
+It may be 7zip / winrar / anything related to it because the file is password-protected.
+
+After i thinking around...... for less than 3 days... 
+In the morning, i got the idea about using binwalk to analyze the file for embedded file, and maybe extracting the file itself...
+
+So, i use binwalk (name of the file) command -> binwak nm01.pcapng to see what happens. Here is the output i got :
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+3122          0xC32           7-zip archive data, version 0.4
+
+AHA, just i thought before, this file originally is 7-zip file itself.
+Let's extract it again this time using 7z e (name of the file) command -> 7z e nm01.pcapng to see what happens. Here is the output i got :
+
+7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,8 CPUs Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (806EA),ASM,AES-NI)
+
+Scanning the drive for archives:
+1 file, 3856 bytes (4 KiB)
+
+Extracting archive: nm01.pcapng
+
+WARNINGS:
+There are data after the end of archive
+
+--
+Path = nm01.pcapng
+Type = 7z
+WARNINGS:
+There are data after the end of archive
+Offset = 3122
+Physical Size = 222
+Tail Size = 512
+Headers Size = 190
+Method = LZMA2:12 7zAES
+Solid = -
+Blocks = 1
+
+    
+Enter password (will not be echoed):
+
+The file is password-protected, just i said before... Lets just using enter in your keyboard to see what happens...
+
+ERROR: Data Error in encrypted file. Wrong password? : FLAG/Flag.txt
+
+Sub items Errors: 1
+
+Archives with Errors: 1
+
+Warnings: 1
+
+Sub items Errors: 1
+
+It turns out that if i input the correct password, it will get the output Flag.txt itself.
+
+So, let's input the password i got (SecurePa55word8!) to see what happens after this.
+
+Everything is Ok      
+
+Archives with Warnings: 1
+
+Warnings: 1
+Folders: 1
+Files: 1
+Size:       26
+Compressed: 3856
+
+It turns out that we finally input the correct password for the nm01.pcapng (7zip) file itself.
+
+Finally, Let's use ls command to list the file and use cat (name of the file) command -> cat Flag.txt to get the flag....
+
+
+
+
+
+
